@@ -9,7 +9,8 @@ st.title("🎬 Movie Recommendation System (10,000+ Movies)")
 # Load dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\Admin\Desktop\internship_projects\movie_recommendation\sample_10000_movies.csv")
+    return pd.read_csv("sample_10000_movies.csv")
+
 
 df = load_data()
 
@@ -42,3 +43,4 @@ if st.button("Recommend"):
     st.subheader("🎥 Recommended Movies:")
     for rec in recommendations:
         st.write(f"- {rec}")
+
